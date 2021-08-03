@@ -7,6 +7,6 @@ class Ball():
         self.x = x
         self.y = y
 
-    def draw_ball(self, screen):
+    def draw(self, screen):
         draw.circle(screen, [150, 150, 150], [self.x, self.y], 2)
 
