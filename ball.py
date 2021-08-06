@@ -8,5 +8,5 @@ class Ball():
         self.y = y
 
     def draw(self, screen):
-        draw.circle(screen, [150, 150, 150], [self.x, self.y], 2)
+        draw.circle(screen, [134, 255, 0], [self.x, self.y], 30)
 
