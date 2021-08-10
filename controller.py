@@ -16,6 +16,7 @@ def control():
         model.igroc_left.go_up()
     if keys[pygame.K_s]:
         model.igroc_left.go_down()
-
     if keys[pygame.K_UP]:
         model.igroc_right.go_up()
+    if keys[pygame.K_DOWN]:
+        model.igroc_right.go_down()
