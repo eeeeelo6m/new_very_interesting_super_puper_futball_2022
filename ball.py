@@ -1,20 +1,36 @@
-import pygame
+import pygame, igroc
 from pygame import draw
 
 
 class Ball():
-    def __init__(self, x, y):
+    def __init__(self, x, y, radius, speedx, speedy, ):
         self.x = x
-        self.y = y
-        self.object_rect = pygame.Rect(x-30, y-30, 60, 60)
+        # self.y = y
+        self.radius = radius
+
+        self.object_rect = pygame.Rect(x - 30, y - 30, self.radius * 2, self.radius * 2)
+        self.speedy = speedy
+        self.speedx = speedx
 
     def draw(self, screen):
-        draw.rect(screen,[0,0,0],self.object_rect)
-        draw.circle(screen, [134, 255, 0], [self.x, self.y], 30)
+        # draw.rect(screen, [0, 0, 0], self.object_rect)
+        draw.circle(screen, [134, 255, 0], self.object_rect.center, self.radius)
+
+    def dvigenie(self, igroc_left, igroc_right):
+        self.object_rect.y += self.speedy
+        self.object_rect.x += self.speedx
+        if self.object_rect.y <= 0:
+            self.speedy = -self.speedy
+        if self.object_rect.bottom >= 600:
+            self.speedy = -self.speedy
+        if self.object_rect.x <= 0:
+            self.speedx = -self.speedx
+        if self.object_rect.right >= 1150:
+            self.speedx = -self.speedx
+        if igroc_left.obect_igroc.colliderect(self.object_rect) == 1:
+            self.speedx = 0  # -self.speedx
+        if igroc_right.obect_igroc.colliderect(self.object_rect) == 1:
+            self.speedx = 0  # -self.speedx
+            self.object_rect.right=igroc_right.obect_igroc.x
 
 
-
-    def dvigenie(self):
-
-        self.object_rect.y-=3
-        self.object_rect.x-=3

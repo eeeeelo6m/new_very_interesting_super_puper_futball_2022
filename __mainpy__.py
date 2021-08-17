@@ -8,7 +8,7 @@ while True:
     time.sleep(1 / 60)
     controller.control()
     model.step()
-    display.flip()
+
     screen.fill([100, 100, 100])
 
     model.ball.draw(screen)
@@ -20,5 +20,5 @@ while True:
 
 
 
-
-
+    draw.circle(screen,[255,0,0],[1150/2,600/2],1)
+    display.flip()
