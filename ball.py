@@ -21,16 +21,19 @@ class Ball():
         self.object_rect.x += self.speedx
         if self.object_rect.y <= 0:
             self.speedy = -self.speedy
+
         if self.object_rect.bottom >= 600:
             self.speedy = -self.speedy
+
         if self.object_rect.x <= 0:
             self.speedx = -self.speedx
+
         if self.object_rect.right >= 1150:
             self.speedx = -self.speedx
+
         if igroc_left.obect_igroc.colliderect(self.object_rect) == 1:
-            self.speedx = 0  # -self.speedx
+            self.speedx = -self.speedx
+            self.object_rect.x = igroc_left.obect_igroc.right
         if igroc_right.obect_igroc.colliderect(self.object_rect) == 1:
-            self.speedx = 0  # -self.speedx
-            self.object_rect.right=igroc_right.obect_igroc.x
-
-
+            self.speedx = -self.speedx
+            self.object_rect.right = igroc_right.obect_igroc.x

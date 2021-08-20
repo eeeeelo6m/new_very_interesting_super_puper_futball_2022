@@ -12,12 +12,12 @@ class Igroc():
         draw.rect(screen, [0, 136, 255], self.obect_igroc)
 
     def go_up(self):
-        self.obect_igroc.y-=4
+        self.obect_igroc.y-=7
         if self.obect_igroc.y <= 0:
-            self.obect_igroc.y = 0
+            self.obect_igroc.y = 7
 
     def go_down(self):
-        self.obect_igroc.bottom += 4
+        self.obect_igroc.bottom += 7
         if self.obect_igroc.bottom>=600:
             self.obect_igroc.bottom=600
 
