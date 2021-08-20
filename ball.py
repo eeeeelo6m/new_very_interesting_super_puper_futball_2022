@@ -37,3 +37,7 @@ class Ball():
         if igroc_right.obect_igroc.colliderect(self.object_rect) == 1:
             self.speedx = -self.speedx
             self.object_rect.right = igroc_right.obect_igroc.x
+
+    def goal(self, vorota_left, vorota_right):
+        if vorota_right.obect_vorota.colliderect(self.object_rect):
+            return True

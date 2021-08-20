@@ -10,8 +10,8 @@ while True:
     model.step()
 
     screen.fill([100, 100, 100])
-
-    model.ball.draw(screen)
+    if model.ball!=None:
+        model.ball.draw(screen)
     model.ball2.draw(screen)
     model.vorota_left.draw(screen)
     model.vorota_right.draw(screen)
