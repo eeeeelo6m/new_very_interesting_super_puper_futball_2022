@@ -41,3 +41,5 @@ class Ball():
     def goal(self, vorota_left, vorota_right):
         if vorota_right.obect_vorota.colliderect(self.object_rect):
             return True
+        if vorota_left.obect_vorota.colliderect(self.object_rect):
+            return True

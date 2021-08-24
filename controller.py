@@ -1,7 +1,10 @@
-import pygame, model, time
+import pygame, model, random, ball as modul_ball
 from pygame import key
 
 pygame.init()
+TIMER_POYVLENIY_BALL = pygame.event.custom_type()
+def start_timers():
+    pygame.time.set_timer(TIMER_POYVLENIY_BALL, 10000, 1)
 
 
 def control():
@@ -10,6 +13,8 @@ def control():
 
         if r.type == pygame.QUIT:
             exit()
+        if r.type == TIMER_POYVLENIY_BALL:
+            model.make_ball()
 
     keys = key.get_pressed()
     if keys[pygame.K_w]:
