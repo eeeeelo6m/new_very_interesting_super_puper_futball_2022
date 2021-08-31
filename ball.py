@@ -1,4 +1,4 @@
-import pygame, igroc
+import pygame
 from pygame import draw
 
 
@@ -40,6 +40,6 @@ class Ball():
 
     def goal(self, vorota_left, vorota_right):
         if vorota_right.obect_vorota.colliderect(self.object_rect):
-            return True
+            return 1
         if vorota_left.obect_vorota.colliderect(self.object_rect):
-            return True
+            return 2
