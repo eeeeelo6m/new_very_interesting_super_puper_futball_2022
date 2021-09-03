@@ -15,9 +15,8 @@ def make_schet():
     schet = a.render(str(goal1), True, [123, 1, 255])
     schet2 = a.render(str(goal2), True, [123, 1, 255])
 
-def wiiiiiiiiiin():
-    global wiiiiiiiiin
-    wiiiiiiiiin= b.render('WIN',True,[255,237,44])
-
-wiiiiiiiiiin()
+wiiiiiiiiin= b.render('WIN',True,[255,237,44])
+wiiiiiiiin=b.render('WIN',True,[255,110,22])
+igroc=None
+igroc2=None
 make_schet()

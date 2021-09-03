@@ -2,7 +2,7 @@ import vorota, ball as modul_ball, igroc, random, controller, schet
 
 vorota_right = vorota.Vorota(1120, 0)
 vorota_left = vorota.Vorota(0, 0)
-ball = modul_ball.Ball(575, 300, 30, 7, -7)
+ball = modul_ball.Ball(575, 300, 15, 7, -7)
 # ball2=modul_ball.Ball(575,300,30,10,10)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
@@ -31,10 +31,12 @@ def step():
             schet.make_schet()
         if schet.goal1==3:
             wiiiiiin=1
+
             print('LEFT iгрок WIIIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNN')
 
         if schet.goal2==3:
-            wiiiiiin=1
+            wiiiiiin=2
+
             print('iгрок RIGHT WIIIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNNN')
 
     # ball2.dvigenie(igroc_left, igroc_right)

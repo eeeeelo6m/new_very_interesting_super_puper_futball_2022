@@ -6,7 +6,7 @@ class Igroc():
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.obect_igroc = pygame.Rect(self.x, self.y, 30, 150)
+        self.obect_igroc = pygame.Rect(self.x, self.y, 20, 100)
 
     def draw(self, screen):
         draw.rect(screen, [0, 136, 255], self.obect_igroc)
