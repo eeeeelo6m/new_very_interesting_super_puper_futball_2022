@@ -43,8 +43,8 @@ while True:
     model.igroc_left.draw(screen)
     model.igroc_right.draw(screen)
 
-    screen.blit(schet.schet, [30, 0])
-    screen.blit(schet.schet2, [1090, 0])
+    screen.blit(schet.schet_goals, [30, 0])
+    screen.blit(schet.schet_goals2, [1090, 0])
 
     draw.circle(screen, [255, 0, 0], [1150 / 2, 600 / 2], 1)
     display.flip()
