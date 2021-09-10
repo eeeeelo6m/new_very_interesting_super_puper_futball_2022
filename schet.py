@@ -9,11 +9,17 @@ goal1 = 0
 goal2 = 0
 schet_goals=None
 schet_goals2=None
+schet1=None
+schet2=None
+schet_raund1=0
+schet_raund2=0
 def make_schet():
-    global schet_goals, schet_goals2
+    global schet_goals, schet_goals2,schet1,schet2
 
     schet_goals = a.render(str(goal1), True, [123, 1, 255])
     schet_goals2 = a.render(str(goal2), True, [123, 1, 255])
+    schet1=a.render(str(schet_raund1),True,[198,79,90])
+    schet2=a.render(str(schet_raund2),True,[198,79,90])
 
 wiiiiiiiiin= b.render('WIN',True,[255,237,44])
 wiiiiiiiin=b.render('WIN',True,[255,110,22])

@@ -29,12 +29,12 @@ def step():
         if a == 2:
             schet.goal2 += 1
             schet.make_schet()
-        if schet.goal1==3:
+        if schet.goal1==1:
             wiiiiiin=1
 
             print('LEFT iгрок WIIIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNN')
 
-        if schet.goal2==3:
+        if schet.goal2==2:
             wiiiiiin=2
 
             print('iгрок RIGHT WIIIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNNN')
