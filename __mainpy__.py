@@ -1,4 +1,4 @@
-import pygame, controller, model, time, schet,random
+import pygame, controller, model, time, schet, random
 from pygame import display, event, draw
 
 
@@ -16,14 +16,13 @@ def mercanie():
 
 def vesolyu_pereriv():
     screen.fill([19, 179, 81])
-    for b in range(10, 0,-1):
-        timer=schet.b.render(str(b),True,[0,0,0])
-        screen.blit(timer,[500,300])
+    for b in range(10, 0, -1):
+        timer = schet.b.render(str(b), True, [0, 0, 0])
+        screen.blit(timer, [500, 300])
         display.flip()
-        screen.fill([random.randint(10,150), random.randint(100,255), random.randint(75,175)])
+        screen.fill([random.randint(10, 150), random.randint(100, 255), random.randint(75, 175)])
 
         time.sleep(1)
-
 
 
 pygame.init()
@@ -44,8 +43,8 @@ while True:
         schet.schet_raund1 += 1
         schet.make_schet()
         model.wiiiiiin = 0
-        vesolyu_pereriv()
-
+        if schet.schet_raund1 != 2:
+            vesolyu_pereriv()
 
     if model.wiiiiiin == 2:
 
@@ -54,10 +53,8 @@ while True:
         schet.schet_raund2 += 1
         model.wiiiiiin = 0
         schet.make_schet()
-        vesolyu_pereriv()
-
-
-
+        if schet.schet_raund2 != 2:
+            vesolyu_pereriv()
 
     if schet.schet_raund1 == 2:
         schet.igroc = schet.b.render('igroc left', True, [255, 237, 44])
