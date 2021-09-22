@@ -1,4 +1,4 @@
-import pygame, controller, model, time, schet, random
+import pygame, controller, model, time, schet, random,MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS
 from pygame import display, event, draw
 
 
@@ -73,7 +73,7 @@ while True:
     model.vorota_right.draw(screen)
     model.igroc_left.draw(screen)
     model.igroc_right.draw(screen)
-
+    draw.rect(screen,[123,132,231],MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.moneeeeeeessss)
     screen.blit(schet.schet_goals, [30, 0])
     screen.blit(schet.schet_goals2, [1090, 0])
     screen.blit(schet.schet1, [70, 0])
