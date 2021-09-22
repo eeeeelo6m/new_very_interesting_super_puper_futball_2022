@@ -10,7 +10,7 @@ wiiiiiin=0
 
 def make_ball():
     global ball
-    ball = modul_ball.Ball(575, 300, 30, random.choice([5, -5]), -5)
+    ball = modul_ball.Ball(575, 300, 15, random.choice([7, -7]), -7)
 
 
 def step():
@@ -34,7 +34,7 @@ def step():
 
             print('LEFT iгрок WIIIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNN')
 
-        if schet.goal2==2:
+        if schet.goal2==3:
             wiiiiiin=2
 
             print('iгрок RIGHT WIIIIIIIIIIIIIIIIIIIIIIIINNNNNNNNNNNN')
