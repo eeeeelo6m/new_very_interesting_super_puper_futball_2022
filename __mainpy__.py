@@ -73,7 +73,10 @@ while True:
     model.vorota_right.draw(screen)
     model.igroc_left.draw(screen)
     model.igroc_right.draw(screen)
-    draw.rect(screen,[123,132,231],MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.moneeeeeeessss)
+
+    for mones in MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.moneeeeeeessss:
+
+        draw.rect(screen,[123,132,231],mones)
     screen.blit(schet.schet_goals, [30, 0])
     screen.blit(schet.schet_goals2, [1090, 0])
     screen.blit(schet.schet1, [70, 0])

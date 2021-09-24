@@ -1,10 +1,12 @@
-import pygame, model, random, ball as modul_ball
+import pygame, model, random, ball as modul_ball,MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS
 from pygame import key
 
 pygame.init()
 TIMER_POYVLENIY_BALL = pygame.event.custom_type()
-def start_timers():
+TIMER_POYVLENIY_MONES = pygame.event.custom_type()
+def start_timer_ball():
     pygame.time.set_timer(TIMER_POYVLENIY_BALL, 10000, 1)
+pygame.time.set_timer(TIMER_POYVLENIY_MONES,3000,10)
 
 
 def control():
@@ -15,6 +17,8 @@ def control():
             exit()
         if r.type == TIMER_POYVLENIY_BALL:
             model.make_ball()
+        if r.type == TIMER_POYVLENIY_MONES:
+            MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.make_moneeesss()
 
     keys = key.get_pressed()
     if keys[pygame.K_w]:

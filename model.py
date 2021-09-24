@@ -22,7 +22,7 @@ def step():
         if a == 1 or a == 2:
             ball = None
 
-            controller.start_timers()
+            controller.start_timer_ball()
         if a == 1:
             schet.goal1 += 1
             schet.make_schet()
