@@ -33,6 +33,9 @@ while True:
     controller.control()
     model.step()
 
+
+
+
     screen.fill([0, 0, 0])
     if model.ball != None:
         model.ball.draw(screen)

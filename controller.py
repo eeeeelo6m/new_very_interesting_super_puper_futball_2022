@@ -4,21 +4,29 @@ from pygame import key
 pygame.init()
 TIMER_POYVLENIY_BALL = pygame.event.custom_type()
 TIMER_POYVLENIY_MONES = pygame.event.custom_type()
+
 def start_timer_ball():
     pygame.time.set_timer(TIMER_POYVLENIY_BALL, 10000, 1)
-pygame.time.set_timer(TIMER_POYVLENIY_MONES,3000,10)
+
+
+pygame.time.set_timer(TIMER_POYVLENIY_MONES,random.randint(1000,3000),1)
+
+
+
 
 
 def control():
     e = pygame.event.get()
+    print(e)
     for r in e:
 
         if r.type == pygame.QUIT:
             exit()
         if r.type == TIMER_POYVLENIY_BALL:
             model.make_ball()
-        if r.type == TIMER_POYVLENIY_MONES:
+        if r.type == TIMER_POYVLENIY_MONES and MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.mone!=10:
             MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.make_moneeesss()
+            pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint(1000, 3000), 1)
 
     keys = key.get_pressed()
     if keys[pygame.K_w]:
@@ -29,3 +37,5 @@ def control():
         model.igroc_right.go_up()
     if keys[pygame.K_DOWN]:
         model.igroc_right.go_down()
+
+
