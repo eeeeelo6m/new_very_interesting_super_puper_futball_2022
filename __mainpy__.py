@@ -1,7 +1,13 @@
-import pygame, controller, model, time, schet, random,MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS
-from pygame import display, event, draw
+import pygame, controller, model, time, schet, random,MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS,help
+from pygame import display, draw
 
 
+
+pygame.init()
+screen = display.set_mode([1150, 600])
+
+bitcoin=pygame.image.load('picture/биткоин.jpg')
+bitcoin=help.izmeni_kartinku(bitcoin,30,30,[255,255,255],120)
 def mercanie():
     for a in range(0, 25):
         screen.blit(schet.wiiiiiiiiin, [350, 300])
@@ -25,8 +31,7 @@ def vesolyu_pereriv():
         time.sleep(1)
 
 
-pygame.init()
-screen = display.set_mode([1150, 600])
+
 
 while True:
     time.sleep(1 / 60)
@@ -79,7 +84,9 @@ while True:
 
     for mones in MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.moneeeeeeessss:
 
-        draw.rect(screen,[123,132,231],mones)
+        draw.rect(screen,[123,132,231],mones,1,1)
+        screen.blit(bitcoin,[mones.x,mones.y])
+
     screen.blit(schet.schet_goals, [30, 0])
     screen.blit(schet.schet_goals2, [1090, 0])
     screen.blit(schet.schet1, [70, 0])
