@@ -32,8 +32,13 @@ def vesolyu_pereriv():
 
 
 
-
+a=time.time()
 while True:
+
+
+
+
+
     time.sleep(1 / 60)
     controller.control()
     model.step()
@@ -84,8 +89,8 @@ while True:
 
     for mones in MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.moneeeeeeessss:
 
-        draw.rect(screen,[123,132,231],mones,1,1)
-        screen.blit(bitcoin,[mones.x,mones.y])
+        draw.rect(screen,[123,132,231],mones['RECT'],1,1)
+        screen.blit(bitcoin,[mones['RECT'].x,mones['RECT'].y])
 
     screen.blit(schet.schet_goals, [30, 0])
     screen.blit(schet.schet_goals2, [1090, 0])

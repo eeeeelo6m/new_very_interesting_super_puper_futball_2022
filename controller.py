@@ -17,7 +17,7 @@ pygame.time.set_timer(TIMER_POYVLENIY_MONES,random.randint(1000,3000),1)
 
 def control():
     e = pygame.event.get()
-    print(e)
+
     for r in e:
 
         if r.type == pygame.QUIT:

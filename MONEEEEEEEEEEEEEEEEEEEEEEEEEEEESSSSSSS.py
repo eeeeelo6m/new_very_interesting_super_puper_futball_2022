@@ -1,9 +1,13 @@
-import pygame,random
+import pygame,random,time
 moneeeeeeessss=[]
 mone=0
+
+
+
 def make_moneeesss():
     global mone
-    moneeeeeeessss.append(pygame.Rect(random.choice([200,920]),random.randint(0,590),30,30))
+    moneess={'RECT':pygame.Rect(random.choice([200,920]),random.randint(0,590),30,30),'time':time.time()}
+    moneeeeeeessss.append(moneess)
     mone+=1
 a={'name':'Andrey', 'age':12}
 b={'name':'Vova','age':1}
