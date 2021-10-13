@@ -1,4 +1,4 @@
-import pygame, controller, model, time, schet, random,MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS,help
+import pygame, controller, model, time, schet, random,MONEEEEEEEEEEEESSSSSSS,help
 from pygame import display, draw
 
 
@@ -87,7 +87,7 @@ while True:
     model.igroc_left.draw(screen)
     model.igroc_right.draw(screen)
 
-    for mones in MONEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSS.moneeeeeeessss:
+    for mones in MONEEEEEEEEEEEESSSSSSS.moneeeeeeessss:
 
         draw.rect(screen,[123,132,231],mones['RECT'],1,1)
         screen.blit(bitcoin,[mones['RECT'].x,mones['RECT'].y])
