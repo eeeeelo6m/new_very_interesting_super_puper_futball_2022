@@ -26,8 +26,7 @@ def control():
 
         if MONEEEEEEEEEEEESSSSSSS.TIMER_DELETE_MONES==r.type:
             MONEEEEEEEEEEEESSSSSSS.delete_mones()
-            MONEEEEEEEEEEEESSSSSSS.delete_mones()
-            MONEEEEEEEEEEEESSSSSSS.delete_mones()
+
         if r.type == TIMER_POYVLENIY_MONES and MONEEEEEEEEEEEESSSSSSS.mone != 10:
             MONEEEEEEEEEEEESSSSSSS.make_moneeesss()
             pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint( 3000,5000), 1)

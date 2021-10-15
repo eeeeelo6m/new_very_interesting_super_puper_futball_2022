@@ -15,5 +15,8 @@ def make_moneeesss():
 
 
 def delete_mones():
-    moneess['time']
+    for mane in moneeeeeeessss:
+        a=time.time()-mane['time']
+        if a>=3:
+            moneeeeeeessss.remove(mane)
 
