@@ -1,4 +1,4 @@
-import pygame, controller, model, time, schet, random,MONEEEEEEEEEEEESSSSSSS,help
+import pygame, controller, model, time,view
 from pygame import display, draw
 
 
@@ -13,7 +13,7 @@ while True:
     time.sleep(1 / 60)
     controller.control()
     model.step()
-
+    view.view()
 
 
 
