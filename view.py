@@ -1,12 +1,6 @@
 import pygame, schet, random, MONEEEEEEEEEEEESSSSSSS, help, time, model
 from pygame import display, draw
 
-pygame.init()
-screen = display.set_mode([1150, 600])
-
-bitcoin = pygame.image.load('picture/биткоин.jpg')
-bitcoin = help.izmeni_kartinku(bitcoin, 30, 30, [255, 255, 255], 120)
-
 
 def mercanie():
     for a in range(0, 25):
@@ -23,7 +17,7 @@ def mercanie():
 def vesolyu_pereriv():
     screen.fill([19, 179, 81])
     for b in range(10, 0, -1):
-        timer = schet.b.render(str(b), True, [0, 0, 0])
+        timer = shrift_pereriva.render(str(b), True, [0, 0, 0])
         screen.blit(timer, [500, 300])
         display.flip()
         screen.fill([random.randint(10, 150), random.randint(100, 255), random.randint(75, 175)])
@@ -33,31 +27,21 @@ def vesolyu_pereriv():
 
 def view():
     screen.fill([0, 0, 0])
+    schet.make_schet()
     if model.ball != None:
         model.ball.draw(screen)
-    if model.player_win_in_raund == model.IGROC_LEFT:
-        model.smena_raunda(model.IGROC_LEFT)
-        schet.make_schet()
 
-        if schet.schet_raund_left != 2:
-            vesolyu_pereriv()
 
-    if model.player_win_in_raund == model.IGROC_RIGHT:
-        model.smena_raunda(model.IGROC_RIGHT)
-
-        schet.make_schet()
-        if schet.schet_raund_right != 2:
-            vesolyu_pereriv()
 
     if schet.schet_raund_left == 2:
-        schet.igroc = schet.b.render('igroc left', True, [255, 237, 44])
-        schet.igroc2 = schet.b.render('igroc left', True, [255, 110, 22])
+        schet.igroc = schet.shrift_win.render('igroc left', True, [255, 237, 44])
+        schet.igroc2 = schet.shrift_win.render('igroc left', True, [255, 110, 22])
         mercanie()
         exit()
 
     if schet.schet_raund_right == 2:
-        schet.igroc = schet.b.render('igroc right', True, [255, 237, 44])
-        schet.igroc2 = schet.b.render('igroc right', True, [255, 110, 22])
+        schet.igroc = schet.shrift_win.render('igroc right', True, [255, 237, 44])
+        schet.igroc2 = schet.shrift_win.render('igroc right', True, [255, 110, 22])
         mercanie()
         exit()
 
@@ -78,3 +62,14 @@ def view():
 
     draw.circle(screen, [255, 0, 0], [1150 / 2, 600 / 2], 1)
     display.flip()
+
+
+pygame.init()
+model.pri_smene_raunda = vesolyu_pereriv
+screen = display.set_mode([1150, 600])
+
+shrift_pereriva = pygame.font.SysFont('comicsansms', 200)
+
+bitcoin = pygame.image.load('picture/биткоин.jpg')
+bitcoin = help.izmeni_kartinku(bitcoin, 30, 30, [255, 255, 255], 120)
+

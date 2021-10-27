@@ -3,10 +3,10 @@ import pygame
 pygame.init()
 
 print(pygame.font.get_fonts())
-a = pygame.font.SysFont('comicsansms', 50)
-b = pygame.font.SysFont('comicsansms',200)
-goal1 = 0
-goal2 = 0
+shrift_goal = pygame.font.SysFont('comicsansms', 50)
+shrift_win = pygame.font.SysFont('comicsansms', 200)
+goal_igroc_right = 0
+goal_igroc_left = 0
 schet_goals=None
 schet_goals2=None
 schet1=None
@@ -16,13 +16,13 @@ schet_raund_right=0
 def make_schet():
     global schet_goals, schet_goals2,schet1,schet2
 
-    schet_goals = a.render(str(goal1), True, [123, 1, 255])
-    schet_goals2 = a.render(str(goal2), True, [123, 1, 255])
-    schet1=a.render(str(schet_raund_left), True, [198, 79, 90])
-    schet2=a.render(str(schet_raund_right), True, [198, 79, 90])
+    schet_goals = shrift_goal.render(str(goal_igroc_right), True, [123, 1, 255])
+    schet_goals2 = shrift_goal.render(str(goal_igroc_left), True, [123, 1, 255])
+    schet1=shrift_goal.render(str(schet_raund_left), True, [198, 79, 90])
+    schet2=shrift_goal.render(str(schet_raund_right), True, [198, 79, 90])
 
-wiiiiiiiiin= b.render('WIN',True,[255,237,44])
-wiiiiiiiin=b.render('WIN',True,[255,110,22])
+wiiiiiiiiin= shrift_win.render('WIN', True, [255, 237, 44])
+wiiiiiiiin=shrift_win.render('WIN', True, [255, 110, 22])
 igroc=None
 igroc2=None
 make_schet()
