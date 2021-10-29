@@ -4,7 +4,7 @@ pygame.init()
 
 print(pygame.font.get_fonts())
 shrift_goal = pygame.font.SysFont('comicsansms', 50)
-shrift_win = pygame.font.SysFont('comicsansms', 200)
+
 goal_igroc_right = 0
 goal_igroc_left = 0
 schet_goals=None
@@ -21,8 +21,6 @@ def make_schet():
     schet1=shrift_goal.render(str(schet_raund_left), True, [198, 79, 90])
     schet2=shrift_goal.render(str(schet_raund_right), True, [198, 79, 90])
 
-wiiiiiiiiin= shrift_win.render('WIN', True, [255, 237, 44])
-wiiiiiiiin=shrift_win.render('WIN', True, [255, 110, 22])
-igroc=None
-igroc2=None
+
+
 make_schet()

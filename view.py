@@ -2,17 +2,30 @@ import pygame, schet, random, MONEEEEEEEEEEEESSSSSSS, help, time, model
 from pygame import display, draw
 
 
-def mercanie():
+def mercanie(text,text2):
+    igroc_win_color1 = shrift_win.render(text, True, [255, 237, 44])
+    igroc_win_color2 = shrift_win.render(text, True, [255, 110, 22])
+    win1 = shrift_win.render(text2, True, [255, 237, 44])
+    win2 = shrift_win.render(text2, True, [255, 110, 22])
     for a in range(0, 25):
-        screen.blit(schet.wiiiiiiiiin, [350, 300])
-        screen.blit(schet.igroc, [125, 0])
+        screen.blit(win1, [350, 300])
+        screen.blit(igroc_win_color1, [125, 0])
         display.flip()
         time.sleep(0.2)
-        screen.blit(schet.wiiiiiiiin, [350, 300])
-        screen.blit(schet.igroc2, [125, 0])
+        screen.blit(win2, [350, 300])
+        screen.blit(igroc_win_color2, [125, 0])
         display.flip()
         time.sleep(0.2)
 
+
+def pri_pobede():
+    if schet.schet_raund_left>schet.schet_raund_right:
+        mercanie('igroc_left', 'WIN')
+
+    if schet.schet_raund_right > schet.schet_raund_left:
+        mercanie('igroc_right','WIN')
+
+    exit()
 
 def vesolyu_pereriv():
     screen.fill([19, 179, 81])
@@ -33,17 +46,7 @@ def view():
 
 
 
-    if schet.schet_raund_left == 2:
-        schet.igroc = schet.shrift_win.render('igroc left', True, [255, 237, 44])
-        schet.igroc2 = schet.shrift_win.render('igroc left', True, [255, 110, 22])
-        mercanie()
-        exit()
 
-    if schet.schet_raund_right == 2:
-        schet.igroc = schet.shrift_win.render('igroc right', True, [255, 237, 44])
-        schet.igroc2 = schet.shrift_win.render('igroc right', True, [255, 110, 22])
-        mercanie()
-        exit()
 
     # model.ball2.draw(screen)
     model.vorota_left.draw(screen)
@@ -66,10 +69,11 @@ def view():
 
 pygame.init()
 model.pri_smene_raunda = vesolyu_pereriv
+model.pri_pobede=pri_pobede
 screen = display.set_mode([1150, 600])
 
 shrift_pereriva = pygame.font.SysFont('comicsansms', 200)
+shrift_win = pygame.font.SysFont('comicsansms', 200)
 
 bitcoin = pygame.image.load('picture/биткоин.jpg')
 bitcoin = help.izmeni_kartinku(bitcoin, 30, 30, [255, 255, 255], 120)
-

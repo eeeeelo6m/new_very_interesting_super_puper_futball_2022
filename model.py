@@ -1,5 +1,6 @@
 import vorota, ball as modul_ball, igroc, random, controller, schet
 pri_smene_raunda=None
+pri_pobede=None
 vorota_right = vorota.Vorota(1120, 0)
 vorota_left = vorota.Vorota(0, 0)
 ball = modul_ball.Ball(575, 300, 15, 7, -7)
@@ -24,10 +25,6 @@ def smena_raunda(win):
 
 
 
-
-
-
-
 def step():
     global ball
 
@@ -44,17 +41,23 @@ def step():
             schet.goal_igroc_left += 1
 
         if schet.goal_igroc_right==3:
-            if pri_smene_raunda is not None:
+            if callable(pri_smene_raunda):
                 pri_smene_raunda()
             smena_raunda(IGROC_LEFT)
 
 
         if schet.goal_igroc_left==3:
-            if pri_smene_raunda is not None:
+            if callable(pri_smene_raunda):
                 pri_smene_raunda()
             smena_raunda(IGROC_RIGHT)
 
 
+        if schet.schet_raund_left==2:
+            if callable(pri_pobede):
+                pri_pobede()
 
+        if schet.schet_raund_right==2:
+            if callable(pri_pobede):
+                pri_pobede()
 
     # ball2.dvigenie(igroc_left, igroc_right)
