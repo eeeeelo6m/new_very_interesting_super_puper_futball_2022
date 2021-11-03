@@ -8,7 +8,7 @@ class Ball():
         # self.y = y
         self.radius = radius
 
-        self.object_rect = pygame.Rect(x - 30, y - 30, self.radius * 2, self.radius * 2)
+        self.object_rect = pygame.Rect(x - self.radius, y - self.radius, self.radius * 2, self.radius * 2)
         self.speedy = speedy
         self.speedx = speedx
 
@@ -39,7 +39,9 @@ class Ball():
             self.object_rect.right = igroc_right.obect_igroc.x
 
     def goal(self, vorota_left, vorota_right):
-        if vorota_right.obect_vorota.colliderect(self.object_rect):
-            return 1
         if vorota_left.obect_vorota.colliderect(self.object_rect):
-            return 2
+            return 'left'
+
+        if vorota_right.obect_vorota.colliderect(self.object_rect):
+            return 'right'
+

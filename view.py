@@ -7,6 +7,7 @@ def mercanie(text,text2):
     igroc_win_color2 = shrift_win.render(text, True, [255, 110, 22])
     win1 = shrift_win.render(text2, True, [255, 237, 44])
     win2 = shrift_win.render(text2, True, [255, 110, 22])
+    screen.fill([random.randint(0,255),random.randint(0,255),random.randint(0,255)])
     for a in range(0, 25):
         screen.blit(win1, [350, 300])
         screen.blit(igroc_win_color1, [125, 0])
@@ -51,8 +52,8 @@ def view():
     # model.ball2.draw(screen)
     model.vorota_left.draw(screen)
     model.vorota_right.draw(screen)
-    model.igroc_left.draw(screen)
-    model.igroc_right.draw(screen)
+    model.igroc_left.draw1(screen)
+    model.igroc_right.draw2(screen)
 
     for mones in MONEEEEEEEEEEEESSSSSSS.moneeeeeeessss:
         draw.rect(screen, [123, 132, 231], mones['RECT'], 1, 1)
@@ -60,8 +61,8 @@ def view():
 
     screen.blit(schet.schet_goals, [30, 0])
     screen.blit(schet.schet_goals2, [1090, 0])
-    screen.blit(schet.schet1, [70, 0])
-    screen.blit(schet.schet2, [1050, 0])
+    screen.blit(schet.schet_raun_left_kartinka, [70, 0])
+    screen.blit(schet.schet_raund_right_kartinka, [1050, 0])
 
     draw.circle(screen, [255, 0, 0], [1150 / 2, 600 / 2], 1)
     display.flip()

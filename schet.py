@@ -9,17 +9,17 @@ goal_igroc_right = 0
 goal_igroc_left = 0
 schet_goals=None
 schet_goals2=None
-schet1=None
-schet2=None
+schet_raun_left_kartinka=None
+schet_raund_right_kartinka=None
 schet_raund_left=0
 schet_raund_right=0
 def make_schet():
-    global schet_goals, schet_goals2,schet1,schet2
+    global schet_goals, schet_goals2,schet_raun_left_kartinka,schet_raund_right_kartinka
 
     schet_goals = shrift_goal.render(str(goal_igroc_right), True, [123, 1, 255])
     schet_goals2 = shrift_goal.render(str(goal_igroc_left), True, [123, 1, 255])
-    schet1=shrift_goal.render(str(schet_raund_left), True, [198, 79, 90])
-    schet2=shrift_goal.render(str(schet_raund_right), True, [198, 79, 90])
+    schet_raun_left_kartinka=shrift_goal.render(str(schet_raund_left), True, [198, 79, 90])
+    schet_raund_right_kartinka=shrift_goal.render(str(schet_raund_right), True, [198, 79, 90])
 
 
 
