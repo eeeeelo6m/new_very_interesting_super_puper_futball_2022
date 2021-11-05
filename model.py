@@ -7,8 +7,8 @@ ball = modul_ball.Ball(1150/2, 600/2, 15, 9, -9)
 # ball2=modul_ball.Ball(575,300,30,10,10)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
-RAUND=2
-GOAL=3
+RAUND=1
+GOAL=1
 IGROC_LEFT=1
 IGROC_RIGHT=2
 def make_ball():
