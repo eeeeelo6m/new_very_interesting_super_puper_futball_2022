@@ -59,10 +59,10 @@ def view():
     # model.ball2.draw(screen)
     model.vorota_left.draw(screen)
     model.vorota_right.draw(screen)
-    model.igroc_left.draw1(screen,[0, 136, 255])
-    model.igroc_right.draw1(screen,[255,89,145])
+    model.igroc_left.draw(screen, [0, 136, 255])
+    model.igroc_right.draw(screen, [255, 89, 145])
 
-    for mones in MONEEEEEEEEEEEESSSSSSS.moneeeeeeessss:
+    for mones in MONEEEEEEEEEEEESSSSSSS.mones:
         draw.rect(screen, [123, 132, 231], mones['RECT'], 1, 1)
         screen.blit(bitcoin, [mones['RECT'].x, mones['RECT'].y])
 
