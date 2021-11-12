@@ -1,4 +1,4 @@
-import pygame,random,time
+import pygame,random,time,igroc
 mones=[]
 mone_count=0
 
@@ -19,4 +19,7 @@ def delete_mones():
         a=time.time()-mane['time']
         if a>=3:
             mones.remove(mane)
+
+
+
 

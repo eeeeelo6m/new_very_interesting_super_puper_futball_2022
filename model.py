@@ -1,4 +1,4 @@
-import vorota, ball as modul_ball, igroc, random, controller, schet
+import vorota, ball as modul_ball, igroc, random, controller, schet,MONEEEEEEEEEEEESSSSSSS
 pri_smene_raunda=None
 pri_pobede=None
 vorota_right = vorota.Vorota(1120, 0)
@@ -23,6 +23,12 @@ def smena_raunda(win):
         schet.schet_raund_left += 1
     schet.goal_igroc_right = 0
     schet.goal_igroc_left = 0
+
+
+def sobiranie_mones():
+    for mone in MONEEEEEEEEEEEESSSSSSS.mones:
+        if mone['RECT'].colliderect(igroc_left.obect_igroc)==True:
+            MONEEEEEEEEEEEESSSSSSS.mones.remove(mone)
 
 
 

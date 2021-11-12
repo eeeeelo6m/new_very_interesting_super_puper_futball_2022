@@ -34,7 +34,9 @@ def control():
     keys = key.get_pressed()
     if keys[pygame.K_w]:
         model.igroc_left.go_up()
+        model.sobiranie_mones()
     if keys[pygame.K_s]:
+        model.sobiranie_mones()
         model.igroc_left.go_down()
     if keys[pygame.K_UP]:
         model.igroc_right.go_up()
