@@ -28,7 +28,7 @@ def control():
             MONEEEEEEEEEEEESSSSSSS.delete_mones()
 
         if r.type == TIMER_POYVLENIY_MONES and MONEEEEEEEEEEEESSSSSSS.mone_count != 10:
-            MONEEEEEEEEEEEESSSSSSS.make_mones()
+            model.make_mones()
             pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint( 3000,5000), 1)
 
     keys = key.get_pressed()
@@ -40,5 +40,7 @@ def control():
         model.igroc_left.go_down()
     if keys[pygame.K_UP]:
         model.igroc_right.go_up()
+        model.sobiranie_mones()
     if keys[pygame.K_DOWN]:
         model.igroc_right.go_down()
+        model.sobiranie_mones()

@@ -8,9 +8,11 @@ ball = modul_ball.Ball(1150/2, 600/2, 15, 9, -9)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
 RAUND=2
-GOAL=9
+GOAL=3
 IGROC_LEFT=1
 IGROC_RIGHT=2
+def make_mones():
+    MONEEEEEEEEEEEESSSSSSS.make_mones(igroc_left,igroc_right)
 def make_ball():
     global ball
     ball = modul_ball.Ball(575, 300, 15, random.choice([-9, 9]), -9)
@@ -29,7 +31,10 @@ def sobiranie_mones():
     for mone in MONEEEEEEEEEEEESSSSSSS.mones:
         if mone['RECT'].colliderect(igroc_left.obect_igroc)==True:
             MONEEEEEEEEEEEESSSSSSS.mones.remove(mone)
-
+            schet.schet_mone_left+=1
+        if mone['RECT'].colliderect(igroc_right.obect_igroc)==True:
+            MONEEEEEEEEEEEESSSSSSS.mones.remove(mone)
+            schet.schet_mone_right+=1
 
 
 def step():

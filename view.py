@@ -68,9 +68,12 @@ def view():
 
     screen.blit(schet.cartinca_goals_left, [30, 0])
     screen.blit(schet.cartinca_goal_right, [1090, 0])
+
     screen.blit(schet.schet_raun_left_kartinka, [70, 0])
     screen.blit(schet.schet_raund_right_kartinka, [1050, 0])
 
+    screen.blit(schet.schet_mone_left_kartinka,[110,0])
+    screen.blit(schet.schet_mone_right_kartinka,[1010,0])
     draw.circle(screen, [255, 0, 0], [1150 / 2, 600 / 2], 1)
     display.flip()
 
