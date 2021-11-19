@@ -62,9 +62,9 @@ def view():
     model.igroc_left.draw(screen, [0, 136, 255])
     model.igroc_right.draw(screen, [255, 89, 145])
 
-    for mones in MONEEEEEEEEEEEESSSSSSS.mones:
-        draw.rect(screen, [123, 132, 231], mones['RECT'], 1, 1)
-        screen.blit(bitcoin, [mones['RECT'].x, mones['RECT'].y])
+    # for mones in MONEEEEEEEEEEEESSSSSSS.mones:
+    #     draw.rect(screen, [123, 132, 231], mones['RECT'], 1, 1)
+    #     screen.blit(bitcoin, [mones['RECT'].x, mones['RECT'].y])
 
     screen.blit(schet.cartinca_goals_left, [30, 0])
     screen.blit(schet.cartinca_goal_right, [1090, 0])
@@ -72,8 +72,8 @@ def view():
     screen.blit(schet.schet_raun_left_kartinka, [70, 0])
     screen.blit(schet.schet_raund_right_kartinka, [1050, 0])
 
-    screen.blit(schet.schet_mone_left_kartinka,[110,0])
-    screen.blit(schet.schet_mone_right_kartinka,[1010,0])
+    # screen.blit(schet.schet_mone_left_kartinka,[110,0])
+    # screen.blit(schet.schet_mone_right_kartinka,[1010,0])
     draw.circle(screen, [255, 0, 0], [1150 / 2, 600 / 2], 1)
     display.flip()
 
