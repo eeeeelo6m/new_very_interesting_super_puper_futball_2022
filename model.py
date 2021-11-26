@@ -8,9 +8,11 @@ ball = modul_ball.Ball(1150/2, 600/2, 15, 9, -9)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
 RAUND=2
-GOAL=3
+GOAL=1
 IGROC_LEFT=1
 IGROC_RIGHT=2
+gamemod='standard'
+improvizirovanny_timer=10
 def make_mones():
     MONEEEEEEEEEEEESSSSSSS.make_mones(igroc_left,igroc_right)
 def make_ball():

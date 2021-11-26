@@ -35,19 +35,18 @@ def pri_pobede():
 
     exit()
 
-def vesolyu_pereriv():
-    screen.fill([19, 179, 81])
-    for b in range(10, 0, -1):
-        timer = shrift_pereriva.render(str(b), True, [0, 0, 0])
-        screen.blit(timer, [500, 300])
-        display.flip()
-        screen.fill([random.randint(10, 150), random.randint(100, 255), random.randint(75, 175)])
 
-        time.sleep(1)
+def vesolyu_pereriv():
+    model.gamemod = 'pereriv'
 
 
 def view():
     screen.fill([0, 0, 0])
+
+    # if int(time.time())%5>3:
+    #     display.flip()
+    #     return
+
     schet.make_schet()
     if model.ball != None:
         model.ball.draw(screen)
@@ -79,11 +78,14 @@ def view():
 
 
 pygame.init()
-model.pri_smene_raunda = vesolyu_pereriv
+
 model.pri_pobede=pri_pobede
 screen = display.set_mode([1150, 600])
 
-shrift_pereriva = pygame.font.SysFont('comicsansms', 200)
+
+
+
+model.pri_smene_raunda = vesolyu_pereriv
 shrift_win = pygame.font.SysFont('comicsansms', 200)
 
 bitcoin = pygame.image.load('picture/биткоин.jpg')
