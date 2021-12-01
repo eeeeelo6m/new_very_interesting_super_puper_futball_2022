@@ -11,7 +11,9 @@ while True:
         controller.control()
         view.view()
     elif model.gamemod=='pereriv':
+
         controller_pereriv.control()
+
         view_pereriv.skrin_2(view.screen)
     model.step()
 

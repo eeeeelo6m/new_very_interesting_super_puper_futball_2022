@@ -31,6 +31,7 @@ def control():
             model.make_mones()
             pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint( 3000,5000), 1)
 
+
     keys = key.get_pressed()
     if keys[pygame.K_w]:
         model.igroc_left.go_up()
