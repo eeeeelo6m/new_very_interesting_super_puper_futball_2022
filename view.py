@@ -36,8 +36,6 @@ def pri_pobede():
     exit()
 
 
-def vesolyu_pereriv():
-    model.gamemod = 'pereriv'
 
 
 def view():
@@ -85,7 +83,7 @@ screen = display.set_mode([1150, 600])
 
 
 
-model.pri_smene_raunda = vesolyu_pereriv
+
 shrift_win = pygame.font.SysFont('comicsansms', 200)
 
 bitcoin = pygame.image.load('picture/биткоин.jpg')

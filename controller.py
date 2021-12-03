@@ -4,11 +4,14 @@ from pygame import key
 pygame.init()
 TIMER_POYVLENIY_BALL = pygame.event.custom_type()
 TIMER_POYVLENIY_MONES = pygame.event.custom_type()
-
+TIMER_ZAPUSKA_BALL=pygame.event.custom_type()
 
 
 def start_timer_ball():
-    pygame.time.set_timer(TIMER_POYVLENIY_BALL, 10000, 1)
+    pygame.time.set_timer(TIMER_POYVLENIY_BALL, 3000, 1)
+
+def start_timer_zapuska_ball():
+    pygame.time.set_timer(TIMER_ZAPUSKA_BALL,2000,1)
 
 
 pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint(3000,5000), 1)
@@ -21,8 +24,14 @@ def control():
 
         if r.type == pygame.QUIT:
             exit()
+
+
         if r.type == TIMER_POYVLENIY_BALL:
             model.make_ball()
+            start_timer_zapuska_ball()
+
+        if TIMER_ZAPUSKA_BALL==r.type:
+            model.zapusc_ball()
 
         if MONEEEEEEEEEEEESSSSSSS.TIMER_DELETE_MONES==r.type:
             MONEEEEEEEEEEEESSSSSSS.delete_mones()

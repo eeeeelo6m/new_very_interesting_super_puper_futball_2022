@@ -4,11 +4,11 @@ pri_pobede=None
 vorota_right = vorota.Vorota(1120, 0)
 vorota_left = vorota.Vorota(0, 0)
 ball = modul_ball.Ball(1150/2, 600/2, 15, 9, -9)
-# ball2=modul_ball.Ball(575,300,30,10,10)
+#ball2=modul_ball.Ball(575,300,30,10,10)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
 RAUND=2
-GOAL=1
+GOAL=2
 IGROC_LEFT=1
 IGROC_RIGHT=2
 gamemod='standard'
@@ -16,6 +16,10 @@ improvizirovanny_timer=10
 def make_mones():
     MONEEEEEEEEEEEESSSSSSS.make_mones(igroc_left,igroc_right)
 def make_ball():
+    global ball
+    ball = modul_ball.Ball(575, 300, 15, 0, 0)
+
+def zapusc_ball():
     global ball
     ball = modul_ball.Ball(575, 300, 15, random.choice([-9, 9]), -9)
 
@@ -57,15 +61,15 @@ def step():
 
     if schet.goal_igroc_right==GOAL:
         smena_raunda(IGROC_RIGHT)
-        if callable(pri_smene_raunda) and schet.schet_raund_right!=RAUND:
-            pri_smene_raunda()
+        if schet.schet_raund_right!=RAUND:
+            smena_regima_pereriv()
 
 
 
     if schet.goal_igroc_left==GOAL:
         smena_raunda(IGROC_LEFT)
-        if callable(pri_smene_raunda) and schet.schet_raund_left != RAUND:
-            pri_smene_raunda()
+        if schet.schet_raund_left != RAUND:
+            smena_regima_pereriv()
 
 
 
@@ -77,4 +81,12 @@ def step():
         if callable(pri_pobede):
             pri_pobede()
 
-    # ball2.dvigenie(igroc_left, igroc_right)
+
+def smena_regima_pereriv():
+    global gamemod,improvizirovanny_timer
+    gamemod='pereriv'
+    improvizirovanny_timer=10
+    import controller_pereriv
+    controller_pereriv.start_regima()
+
+#ball2.dvigenie(igroc_left, igroc_right)

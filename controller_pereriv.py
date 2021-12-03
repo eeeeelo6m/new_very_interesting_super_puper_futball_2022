@@ -17,8 +17,15 @@ def control():
             exit()
         if r.type == pygame.KEYDOWN and r.key == pygame.K_ESCAPE:
             model.gamemod = 'standard'
+
             model.make_ball()
+
 
         if timer_pereriv == r.type:
             model.improvizirovanny_timer -= 1
             pygame.time.set_timer(timer_pereriv, 1000, 1)
+
+def start_regima():
+    global timer_pereriv
+    timer_pereriv=None
+
