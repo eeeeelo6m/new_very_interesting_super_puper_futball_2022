@@ -10,12 +10,16 @@ TIMER_ZAPUSKA_BALL=pygame.event.custom_type()
 def start_timer_ball():
     pygame.time.set_timer(TIMER_POYVLENIY_BALL, 3000, 1)
 
+
+
 def start_timer_zapuska_ball():
     pygame.time.set_timer(TIMER_ZAPUSKA_BALL,2000,1)
 
 
-pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint(3000,5000), 1)
 
+
+pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint(3000,5000), 1)
+start_timer_ball()
 
 def control():
     e = pygame.event.get()

@@ -7,9 +7,8 @@ def skrin_2(screen):
     screen.fill([random.randint(0, 255), random.randint(0, 255), random.randint(255, 255)])
     screen.blit(timer, [500, 300])
     display.flip()
-    if model.improvizirovanny_timer==0:
-        model.gamemod='standard'
-        model.make_ball()
+
+
 
 
 

@@ -3,7 +3,7 @@ pri_smene_raunda=None
 pri_pobede=None
 vorota_right = vorota.Vorota(1120, 0)
 vorota_left = vorota.Vorota(0, 0)
-ball = modul_ball.Ball(1150/2, 600/2, 15, 9, -9)
+ball = None
 #ball2=modul_ball.Ball(575,300,30,10,10)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
@@ -22,6 +22,14 @@ def make_ball():
 def zapusc_ball():
     global ball
     ball = modul_ball.Ball(575, 300, 15, random.choice([-9, 9]), -9)
+
+
+def umenshit_timer_pereriv():
+    global improvizirovanny_timer
+    improvizirovanny_timer -= 1
+    if improvizirovanny_timer == 0:
+        smena_regima_standard()
+
 
 def smena_raunda(win):
 
@@ -88,5 +96,13 @@ def smena_regima_pereriv():
     improvizirovanny_timer=10
     import controller_pereriv
     controller_pereriv.start_regima()
+
+
+def smena_regima_standard():
+    global gamemod
+    gamemod = 'standard'
+    controller.start_timer_ball()
+
+
 
 #ball2.dvigenie(igroc_left, igroc_right)
