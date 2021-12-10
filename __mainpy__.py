@@ -1,4 +1,4 @@
-import pygame, controller, model, time,view,view_pereriv,controller_pereriv
+import pygame, controller, model, time,view,view_pereriv,controller_pereriv,controller_shop,view_shop
 
 
 pygame.init()
@@ -11,10 +11,11 @@ while True:
         controller.control()
         view.view()
     elif model.gamemod=='pereriv':
-
         controller_pereriv.control()
-
         view_pereriv.skrin_2(view.screen)
+    elif model.gamemod=='shop':
+        controller_shop.control()
+        view_shop.skrin_3(view.screen)
     model.step()
 
 

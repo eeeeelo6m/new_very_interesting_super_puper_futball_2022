@@ -33,4 +33,11 @@ def make_schet():
     schet_mone_left_kartinka = shrift.render(str(schet_mone_left),True,[252,255,39])
     schet_mone_right_kartinka = shrift.render(str(schet_mone_right),True,[252,255,39])
 
+
+def schet_mones():
+    global schet_mone_left_kartinka,schet_mone_right_kartinka
+    schet_mone_left_kartinka = shrift.render(str(schet_mone_left),True,[252,255,39])
+    schet_mone_right_kartinka = shrift.render(str(schet_mone_right),True,[252,255,39])
+
+
 make_schet()

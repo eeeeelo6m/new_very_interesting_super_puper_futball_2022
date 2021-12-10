@@ -8,7 +8,7 @@ ball = None
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
 RAUND=2
-GOAL=2
+GOAL=3
 IGROC_LEFT=1
 IGROC_RIGHT=2
 gamemod='standard'
@@ -90,10 +90,11 @@ def step():
             pri_pobede()
 
 
-def smena_regima_pereriv():
+def smena_regima_pereriv(sbros_timer=True):
     global gamemod,improvizirovanny_timer
     gamemod='pereriv'
-    improvizirovanny_timer=10
+    if sbros_timer:
+        improvizirovanny_timer=10
     import controller_pereriv
     controller_pereriv.start_regima()
 

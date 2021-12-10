@@ -16,7 +16,7 @@ def control():
             exit()
         if r.type == pygame.KEYDOWN and r.key == pygame.K_ESCAPE:
 
-            model.smena_regima_standard()
+            model.gamemod='shop'
 
 
         if timer_pereriv == r.type:
