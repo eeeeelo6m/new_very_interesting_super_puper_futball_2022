@@ -8,10 +8,10 @@ ball = None
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
 RAUND=2
-GOAL=3
+GOAL=1
 IGROC_LEFT=1
 IGROC_RIGHT=2
-gamemod='standard'
+gamemod='shop'
 improvizirovanny_timer=10
 def make_mones():
     MONEEEEEEEEEEEESSSSSSS.make_mones(igroc_left,igroc_right)
