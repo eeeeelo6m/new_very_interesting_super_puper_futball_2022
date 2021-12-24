@@ -1,4 +1,4 @@
-import pygame, controller, model, time,view,view_pereriv,controller_pereriv,controller_shop,view_shop
+import pygame, controller, time,view,model,view_pereriv,controller_pereriv,controller_shop,view_shop
 
 
 pygame.init()

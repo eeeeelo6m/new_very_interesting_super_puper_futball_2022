@@ -1,4 +1,4 @@
-import vorota, ball as modul_ball, igroc, random, controller, schet,MONEEEEEEEEEEEESSSSSSS
+import vorota, ball as modul_ball, igroc, random, controller, schet,MONEEEEEEEEEEEESSSSSSS,bigberrys
 pri_smene_raunda=None
 pri_pobede=None
 vorota_right = vorota.Vorota(1120, 0)
@@ -7,11 +7,14 @@ ball = None
 #ball2=modul_ball.Ball(575,300,30,10,10)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
+bigberry_left=bigberrys.Bigberry(150,16)
+
 RAUND=2
 GOAL=1
 IGROC_LEFT=1
 IGROC_RIGHT=2
-gamemod='shop'
+gamemod='standard'
+
 improvizirovanny_timer=10
 def make_mones():
     MONEEEEEEEEEEEESSSSSSS.make_mones(igroc_left,igroc_right)

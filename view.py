@@ -58,6 +58,7 @@ def view():
     model.vorota_right.draw(screen)
     model.igroc_left.draw(screen, [0, 136, 255])
     model.igroc_right.draw(screen, [255, 89, 145])
+    model.bigberry_left.draw(screen)
 
     for mones in MONEEEEEEEEEEEESSSSSSS.mones:
         draw.rect(screen, [123, 132, 231], mones['RECT'], 1, 1)
@@ -88,3 +89,5 @@ shrift_win = pygame.font.SysFont('comicsansms', 200)
 
 bitcoin = pygame.image.load('picture/биткоин.jpg')
 bitcoin = help.izmeni_kartinku(bitcoin, 30, 30, [255, 255, 255], 120)
+
+
