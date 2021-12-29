@@ -58,7 +58,11 @@ def view():
     model.vorota_right.draw(screen)
     model.igroc_left.draw(screen, [0, 136, 255])
     model.igroc_right.draw(screen, [255, 89, 145])
-    model.bigberry_left.draw(screen)
+    if model.bigberry_left is not None:
+        model.bigberry_left.draw(screen)
+
+    if model.bigberry_right is not None:
+        model.bigberry_right.draw(screen)
 
     for mones in MONEEEEEEEEEEEESSSSSSS.mones:
         draw.rect(screen, [123, 132, 231], mones['RECT'], 1, 1)

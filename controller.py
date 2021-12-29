@@ -18,6 +18,7 @@ def start_timer_zapuska_ball():
 
 
 
+
 pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint(3000,5000), 1)
 start_timer_ball()
 
@@ -43,6 +44,13 @@ def control():
         if r.type == TIMER_POYVLENIY_MONES and MONEEEEEEEEEEEESSSSSSS.mone_count != 10:
             model.make_mones()
             pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint( 3000,5000), 1)
+
+
+
+        if r.type == pygame.KEYDOWN and r.key == pygame.K_LSHIFT:
+            model.dobavlenie_bigberry('left')
+        if r.type == pygame.KEYDOWN and r.key == pygame.K_RSHIFT:
+            model.dobavlenie_bigberry('right')
 
 
     keys = key.get_pressed()
