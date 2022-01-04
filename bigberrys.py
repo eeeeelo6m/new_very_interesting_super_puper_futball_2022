@@ -12,4 +12,5 @@ class Bigberry ():
         self.bigberry = help.izmeni_kartinku(self.bigberry, 40, 40, [236, 28, 36], 120)
 
 
+
         screen.blit(self.bigberry,self.obect_bigberry)

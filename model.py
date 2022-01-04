@@ -8,10 +8,10 @@ ball = None
 # ball2=modul_ball.Ball(575,300,30,10,10)
 igroc_left = igroc.Igroc(200, 233)
 igroc_right = igroc.Igroc(920, 233)
-bigberry_left = None
-bigberry_right = None
+bigberrys_left = []
+bigberrys_right = []
 RAUND = 2
-GOAL = 1
+GOAL = 3
 IGROC_LEFT = 1
 IGROC_RIGHT = 2
 gamemod = 'standard'
@@ -36,14 +36,23 @@ def zapusc_ball():
 
 
 def dobavlenie_bigberry(igroc):
-    global bigberry_left, bigberry_right,x_left,x_right
+    global x_left,x_right,bigberrys_right,bigberrys_left
 
     if igroc == 'left':
         bigberry_left = bigberrys.Bigberry(x_left, 16)
+        bigberrys_left.append(bigberry_left)
         x_left=x_left+40
     if igroc == 'right':
         bigberry_right = bigberrys.Bigberry(x_right, 16)
+        bigberrys_right.append(bigberry_right)
         x_right=x_right-40
+
+
+def del_bigberry(igroc):
+    if igroc=='left':
+        bigberrys_left.pop()
+    if igroc=='right':
+        bigberrys_right.pop()
 
 
 def umenshit_timer_pereriv():

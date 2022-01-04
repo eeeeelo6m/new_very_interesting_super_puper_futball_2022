@@ -45,6 +45,11 @@ def control():
             model.make_mones()
             pygame.time.set_timer(TIMER_POYVLENIY_MONES, random.randint( 3000,5000), 1)
 
+        if r.type == pygame.KEYDOWN and r.key == pygame.K_LCTRL:
+            model.del_bigberry('left')
+
+
+
 
 
         if r.type == pygame.KEYDOWN and r.key == pygame.K_LSHIFT:
