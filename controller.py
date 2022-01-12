@@ -47,6 +47,9 @@ def control():
 
         if r.type == pygame.KEYDOWN and r.key == pygame.K_LCTRL:
             model.del_bigberry('left')
+        if r.type == pygame.KEYDOWN and r.key == pygame.K_RCTRL:
+            model.del_bigberry('right')
+
 
 
 

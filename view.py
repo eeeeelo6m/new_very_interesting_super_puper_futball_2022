@@ -36,7 +36,7 @@ def pri_pobede():
 
 
 def view():
-    screen.fill([10, 0, 0])
+    screen.fill([0, 0, 0])
 
     # if int(time.time())%5>3:
     #     display.flip()

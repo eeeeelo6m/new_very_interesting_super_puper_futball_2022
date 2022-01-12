@@ -15,8 +15,8 @@ GOAL = 3
 IGROC_LEFT = 1
 IGROC_RIGHT = 2
 gamemod = 'standard'
-x_left=150
-x_right=965
+
+
 
 improvizirovanny_timer = 10
 
@@ -36,22 +36,29 @@ def zapusc_ball():
 
 
 def dobavlenie_bigberry(igroc):
-    global x_left,x_right,bigberrys_right,bigberrys_left
+    global bigberrys_right, bigberrys_left
+    left=len(bigberrys_left)
+    right=len(bigberrys_right)
 
     if igroc == 'left':
-        bigberry_left = bigberrys.Bigberry(x_left, 16)
+        bigberry_left = bigberrys.Bigberry(left*40+150, 16)
         bigberrys_left.append(bigberry_left)
-        x_left=x_left+40
+
     if igroc == 'right':
-        bigberry_right = bigberrys.Bigberry(x_right, 16)
+
+        bigberry_right = bigberrys.Bigberry(960-right*40, 16)
         bigberrys_right.append(bigberry_right)
-        x_right=x_right-40
+
 
 
 def del_bigberry(igroc):
-    if igroc=='left':
+
+    left=len(bigberrys_left)
+    right=len(bigberrys_right)
+    if igroc == 'left' and left > 0:
+
         bigberrys_left.pop()
-    if igroc=='right':
+    if igroc == 'right' and right > 0:
         bigberrys_right.pop()
 
 
@@ -114,6 +121,12 @@ def step():
     if schet.schet_raund_right == RAUND:
         if callable(pri_pobede):
             pri_pobede()
+
+    if schet.goal_igroc_right==2 and schet.schet_raund_right==0:
+        bigberry_left=len(bigberrys_left)
+        if bigberry_left>=1:
+            print('use bigberi')
+            del_bigberry('left')
 
 
 def smena_regima_pereriv(sbros_timer=True):
