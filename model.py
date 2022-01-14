@@ -1,5 +1,5 @@
 import vorota, ball as modul_ball, igroc, random, controller, schet, MONEEEEEEEEEEEESSSSSSS, bigberrys
-
+BIGBERRY_START=40
 pri_smene_raunda = None
 pri_pobede = None
 vorota_right = vorota.Vorota(1120, 0)
@@ -15,8 +15,6 @@ GOAL = 3
 IGROC_LEFT = 1
 IGROC_RIGHT = 2
 gamemod = 'standard'
-
-
 
 improvizirovanny_timer = 10
 
@@ -37,26 +35,22 @@ def zapusc_ball():
 
 def dobavlenie_bigberry(igroc):
     global bigberrys_right, bigberrys_left
-    left=len(bigberrys_left)
-    right=len(bigberrys_right)
+    left = len(bigberrys_left)
+    right = len(bigberrys_right)
 
     if igroc == 'left':
-        bigberry_left = bigberrys.Bigberry(left*40+150, 16)
+        bigberry_left = bigberrys.Bigberry(left * 40 + 150, 16)
         bigberrys_left.append(bigberry_left)
 
     if igroc == 'right':
-
-        bigberry_right = bigberrys.Bigberry(960-right*40, 16)
+        bigberry_right = bigberrys.Bigberry(960 - right * 40, 16)
         bigberrys_right.append(bigberry_right)
 
 
-
 def del_bigberry(igroc):
-
-    left=len(bigberrys_left)
-    right=len(bigberrys_right)
+    left = len(bigberrys_left)
+    right = len(bigberrys_right)
     if igroc == 'left' and left > 0:
-
         bigberrys_left.pop()
     if igroc == 'right' and right > 0:
         bigberrys_right.pop()
@@ -121,12 +115,14 @@ def step():
     if schet.schet_raund_right == RAUND:
         if callable(pri_pobede):
             pri_pobede()
-
-    if schet.goal_igroc_right==2 and schet.schet_raund_right==0:
-        bigberry_left=len(bigberrys_left)
-        if bigberry_left>=1:
-            print('use bigberi')
-            del_bigberry('left')
+    if ball is not None:
+        print(ball.object_rect.x)
+        if schet.goal_igroc_right == 0 and schet.schet_raund_right == 0 \
+                 and ball.object_rect.x <= BIGBERRY_START and ball.object_rect.x>=BIGBERRY_START+ball.speedx:
+            bigberry_left = len(bigberrys_left)
+            if bigberry_left >= 1:
+                ball.speedx=9
+                del_bigberry('left')
 
 
 def smena_regima_pereriv(sbros_timer=True):
